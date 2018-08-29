@@ -1,0 +1,233 @@
+
+/****************** Base Settings ******************/
+// html, body {
+//     height: 100%;
+// }
+
+.line {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+
+    margin-top: 55px;
+
+    width: 60px;
+    height: 3px;
+    background-color: $yellow-color;
+}
+
+/****************** Отступы ******************/
+
+//p - padding
+//m - margin
+// t - top, b - bootom, r - right, l - left
+// .**-num , where "num" = "num"px but in new variable vw
+// 1vw = 1600px (width psd) / 100;
+
+.pt-110 {
+    padding-top: 110px;//6.875vw;
+}
+
+.pt-170 {
+    padding-top: 170px;//10.625vw;
+}
+/****************** MAIN ******************/
+
+.main {
+    height: 100vh;
+    background:  url(../images/main-img.jpg) 100% 100% no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding-bottom: 16vh;
+    padding-left: 80px;
+}
+
+.main_title {
+    color:white;
+    margin-bottom: 30px;
+
+    h1 {
+        margin: 0;
+    }
+}
+
+.main_logo {
+    box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+
+    font-family: Montserrat;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+
+
+    border-radius: 2px;
+
+    .main_logo--left {
+        border: 1px solid white;
+        border-right: 0;
+
+        padding: 30px;
+        background-color: white;
+        color: $yellow-color;
+
+        line-height: 1;
+    }
+
+    .main_logo--right {
+        padding: 30px 55px 30px 25px;
+
+        color: white;
+
+        border: 1px solid white;
+        border-left: 0;
+
+        background-color: rgba(0, 0, 0, 0.3);
+
+
+
+    }
+}
+
+/****************** ABOUT ******************/
+
+.about {
+    background:  url(../images/dots-background.png) 100% 100% repeat;
+    background-size: cover;
+}
+
+.about_logo {
+    margin-top: 100px;//(100 / $ww)  + vw;
+    text-align: center;
+}
+
+.about_service {
+    padding-top: 110px;//(55 / $ww) + vw;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .photos_workers {
+        max-width: 50%;
+        padding-right: 15px;
+    }
+
+    .about_service_text {
+
+        position: relative;
+        max-width: 50%;
+
+        padding-left: 15px;
+
+        h3 {
+            font-family: Montserrat;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $grey;
+            padding-bottom: 10px;
+            span {
+                color: $yellow-color;
+            }
+        }
+
+        p{  
+            font-family: Lato;
+            font-size: 14px;
+            font-weight: 200;
+            color: $grey;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        button {
+            margin-top: 15px;
+        }
+    }
+
+}
+
+.photos_workers {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+
+    .photos_workers_block { 
+        position: relative;
+        width: 270px;
+        height: 150px;
+
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 400;
+
+        &:nth-child(1) {
+            margin-bottom: 20px;
+        }
+
+        .photos_workers_block_img {
+            width: 100%;
+            height: 100%;
+
+        }
+    
+        .photos_workers_block_text {
+            position: absolute;
+            top: 95px;
+            left: 15px;
+            width: 117px;
+            height: 43px;
+
+            background-color: #333;
+            color: #fff;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            padding-left: 15px;
+        }
+    
+    }
+
+}
+
+
+
+
+
+/****************** Breakpoints ******************/
+
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+  }
+@mixin for-tablet-portrait-up {
+@media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-portait-only {
+@media (min-width: 600px) and (max-width: 899px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+@media (min-width: 900px) { @content; }
+}
+@mixin for-tablet-landscape-only {
+@media (min-width: 900px) and (max-width: 1199px) { @content; }
+}
+@mixin for-desktop-up {
+@media (min-width: 1200px) { @content; }
+}
+@mixin for-desktop-only {
+@media (min-width: 1200px) and (max-width: 1799px) { @content; }
+}
+@mixin for-big-desktop-up {
+@media (min-width: 1800px) { @content; }
+}

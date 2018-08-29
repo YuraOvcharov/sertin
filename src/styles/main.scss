@@ -1,0 +1,32 @@
+// Normalize
+@import 'normalize';
+
+// Variables
+@import 'variables';
+@import "mixins";
+
+// Fonts
+@import 'fonts';
+
+@import 'core';
+// Components
+@import 'components/title';
+
+/*@import 'components/dropdown';
+@import 'components/tabs';
+@import 'components/animation';
+@import 'components/datepicker';
+@import 'components/modals';
+@import 'components/popovers';
+@import 'components/upload-image';
+@import 'components/attach-files';*/
+
+// Layout
+//@import 'layout';
+
+// Blocks
+@import 'blocks/base';
+//@import 'blocks/Enter';
+//@import 'blocks/Change-organization';
+//@import 'blocks/AdminPanel';
+

@@ -1,0 +1,14 @@
+@mixin image-retina($image, $width, $height, $dpr) {
+	@media
+    only screen and (-webkit-min-device-pixel-ratio: $dpr),
+    only screen and (   min--moz-device-pixel-ratio: $dpr),
+    only screen and (     -o-min-device-pixel-ratio: $dpr/1),
+    only screen and (        min-device-pixel-ratio: $dpr),
+    only screen and (                min-resolution: 96 * $dpr + dpi), // 192 for 2dpr, 288 for 3dpr
+    only screen and (                min-resolution: $dpr + dppx) {
+        background-image: url($image);
+        background-size: $width $height;
+    }
+}
+
+// @include image-retina('../images/image@2x.png', 100px, 50px, 2);
