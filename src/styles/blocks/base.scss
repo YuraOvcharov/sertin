@@ -1,21 +1,3 @@
-
-/****************** Base Settings ******************/
-// html, body {
-//     height: 100%;
-// }
-
-.line {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%,0);
-
-    margin-top: 55px;
-
-    width: 60px;
-    height: 3px;
-    background-color: $yellow-color;
-}
-
 /****************** Отступы ******************/
 
 //p - padding
@@ -30,6 +12,18 @@
 
 .pt-170 {
     padding-top: 170px;//10.625vw;
+}
+
+.pt-150 {
+    padding-top: 150px;
+}
+
+.pt-115 {
+    padding-top: 115px;
+}
+
+.pt-200 {
+    padding-top: 200px;
 }
 /****************** MAIN ******************/
 
@@ -52,6 +46,10 @@
 
     h1 {
         margin: 0;
+    }
+
+    p {
+        color: white;
     }
 }
 
@@ -103,12 +101,13 @@
 }
 
 .about_logo {
-    margin-top: 100px;//(100 / $ww)  + vw;
+    margin-top: 35px;//(100 / $ww)  + vw;
     text-align: center;
 }
 
 .about_service {
-    padding-top: 110px;//(55 / $ww) + vw;
+    margin-top: 55px;//(55 / $ww) + vw;
+    padding-bottom: 190px;
 
     display: flex;
     flex-direction: row;
@@ -142,13 +141,12 @@
             font-family: Lato;
             font-size: 14px;
             font-weight: 200;
-            color: $grey;
             text-align: justify;
             margin-bottom: 30px;
         }
 
         button {
-            margin-top: 15px;
+            margin-top: 5px;
         }
     }
 
@@ -160,74 +158,180 @@
     flex-flow: wrap;
     justify-content: space-between;
     align-items: space-between;
+}
 
-    .photos_workers_block { 
-        position: relative;
-        width: 270px;
-        height: 150px;
+.photos_workers_block { 
+    position: relative;
+    width: 270px;
+    height: 150px;
 
-        font-family: Lato;
-        font-size: 14px;
-        font-weight: 400;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
 
-        &:nth-child(1) {
-            margin-bottom: 20px;
+    margin-bottom: 20px;
+
+    .photos_workers_block_img {
+        width: 100%;
+        height: 100%;
+
+    }
+}
+
+.photos_workers_block_text {
+    position: absolute;
+    top: 95px;
+    left: 15px;
+    width: 117px;
+    height: 43px;
+
+    background-color: #333;
+    color: #fff;
+
+    padding-top: 12px;
+    padding-left: 15px;
+}
+
+/****************** Fix background ******************/
+
+.fix_background {
+    height: 380px;    
+}
+
+.fix_background--1 {
+    background: url(../images/bg1.jpg) 100% 100% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.fix_background--2 {
+    background: url(../images/bg2.jpg) 100% 100% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.fix_background--3 {
+    background: url(../images/bg3.jpg) 100% 100% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.fix_background--4 {
+    background: url(../images/bg4.jpg) 100% 100% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/****************** TEAM ******************/
+.team {
+    background: url(../images/dots-background.png) 100% 100% repeat;
+    background-size: cover;
+}
+
+.team_photos {
+    margin-top: 50px;
+}
+
+.photos_workers_block--team { 
+    position: relative;
+    width: 193px;
+    height: 180px;
+
+    margin-bottom: 2px;
+
+    .photos_workers_block_text--dif {
+        position: absolute;
+        top: 120px;
+        left: 10px;
+        height: auto;
+        width: auto;
+
+        padding: 15px 50px 15px 15px;
+
+        span {
+            color: $yellow-color;
         }
-
-        .photos_workers_block_img {
-            width: 100%;
-            height: 100%;
-
-        }
-    
-        .photos_workers_block_text {
-            position: absolute;
-            top: 95px;
-            left: 15px;
-            width: 117px;
-            height: 43px;
-
-            background-color: #333;
-            color: #fff;
-
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-
-            padding-left: 15px;
-        }
-    
     }
 
 }
 
+/****************** Award ******************/
 
+.award {
+    background: url(../images/dots-background.png) 100% 100% repeat;
+    background-size: cover;
+}
 
+.award_card {
+    margin-top: 50px;
+    padding-bottom: 200px;
 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
-/****************** Breakpoints ******************/
+.award_card_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
-@mixin for-phone-only {
-    @media (max-width: 599px) { @content; }
-  }
-@mixin for-tablet-portrait-up {
-@media (min-width: 600px) { @content; }
+    height: 420px;
+    width: 270px;
+
+    padding-bottom: 10px;//25px - 14px margin p
+
+    border-bottom: 2px solid $grey;
+
+    h3 {
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background-color: $grey;
+
+        width: 100%;
+        height: 55px;
+
+        text-align: center;
+        padding-top: 16px;
+
+        margin-bottom: 29px;
+
+        span {
+            color: $yellow-color;
+        }
+    }
+
+    img {
+        margin-bottom: 29px;
+    }
+
+    p {
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 200;
+        text-align: center;
+    }
+
+    .award_card_block_line { 
+        margin: auto auto 28px auto;
+        width: 60px;
+        height: 3px;
+        background-color: $yellow-color;
+    }
+
+    h4 {
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 400;
+
+        margin-bottom: 14px;
+    }
 }
-@mixin for-tablet-portait-only {
-@media (min-width: 600px) and (max-width: 899px) { @content; }
-}
-@mixin for-tablet-landscape-up {
-@media (min-width: 900px) { @content; }
-}
-@mixin for-tablet-landscape-only {
-@media (min-width: 900px) and (max-width: 1199px) { @content; }
-}
-@mixin for-desktop-up {
-@media (min-width: 1200px) { @content; }
-}
-@mixin for-desktop-only {
-@media (min-width: 1200px) and (max-width: 1799px) { @content; }
-}
-@mixin for-big-desktop-up {
-@media (min-width: 1800px) { @content; }
+
+.award_card_block_about {
+    line-height: 1.25;
 }

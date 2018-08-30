@@ -1,16 +1,30 @@
+.line {
+    margin-top: 50px;
+
+    width: 60px;
+    height: 3px;
+    background-color: $yellow-color;
+}
+
 .title {
-    position: relative;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     .title_name {
         font-family: Montserrat;
         font-size: 22px;//1.375vw;
         font-weight: bold;
         font-style: normal;
-        color: #333333;
+        color: $grey;
 
         text-transform: uppercase;
         padding-bottom: 15px;
+
+        span {
+            color:  $yellow-color;
+        }
     }
 
     .title_paragraph {
@@ -21,4 +35,9 @@
         color: #4d4943;
     }
 
+}
+
+// Modification
+.title_name--white {
+    color: white !important;
 }
