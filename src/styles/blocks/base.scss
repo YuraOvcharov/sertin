@@ -6,6 +6,10 @@
 // .**-num , where "num" = "num"px but in new variable vw
 // 1vw = 1600px (width psd) / 100;
 
+.pt-100 {
+    padding-top: 100px;
+}
+
 .pt-110 {
     padding-top: 110px;//6.875vw;
 }
@@ -20,6 +24,10 @@
 
 .pt-115 {
     padding-top: 115px;
+}
+
+.pt-130 {
+    padding-top: 130px;
 }
 
 .pt-200 {
@@ -195,7 +203,7 @@
 /****************** Fix background ******************/
 
 .fix_background {
-    height: 380px;    
+    min-height: 380px;    
 }
 
 .fix_background--1 {
@@ -214,6 +222,7 @@
     background: url(../images/bg3.jpg) 100% 100% no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    
 }
 
 .fix_background--4 {
@@ -222,6 +231,24 @@
     background-attachment: fixed;
 }
 
+.fix_background_row {
+
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 60px;
+    padding-bottom: 120px;
+}
+
+.fix_background_row_img {
+    margin-left: 60px;
+
+    &:nth-child(1){
+        margin:0;
+    }
+}
 
 /****************** TEAM ******************/
 .team {

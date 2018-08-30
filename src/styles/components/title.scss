@@ -6,6 +6,15 @@
     background-color: $yellow-color;
 }
 
+.line--md {
+
+    width: 285px;
+    height: 3px;
+    background-color: white;
+
+    margin-bottom: 120px;
+}
+
 .title {
     display: flex;
     justify-content: center;
@@ -27,6 +36,12 @@
         }
     }
 
+    // Modification
+    .title_name--white {
+        color: white ;
+        padding-bottom: 5px;
+    }
+
     .title_paragraph {
         font-family: Lato;
         font-size: 16px;//1vw;
@@ -35,9 +50,36 @@
         color: #4d4943;
     }
 
+    p {
+        margin-top: 60px;
+        color: white;
+
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+
+        span {
+            color: $yellow-color;
+        }
+    }
+
 }
 
-// Modification
-.title_name--white {
-    color: white !important;
+.title_btn {
+    margin-top: 60px;
+
+    background-color: inherit;
+    color: white;
+
+    border: 1px solid white;
+    border-radius: 1px;
+
+    padding: 20px 55px;
+
+    font-family: Lato;
+    font-weight: bold;
+    font-size: 14px;
+
+
 }
