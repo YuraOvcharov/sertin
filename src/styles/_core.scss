@@ -21,6 +21,9 @@ body {
     font-size: 1rem;
     line-height: $line-height-base;
     min-width: 1024px;
+
+    background: url(../images/dots-background.png) repeat;
+    background-size: initial;
 }
 
 [role='button'] {

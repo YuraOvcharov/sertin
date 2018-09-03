@@ -1,12 +1,21 @@
-.btn--md {
+.btn { 
     background-color: $yellow-color;
     color: white;
     font-family: Lato;
     font-size: 14px;
     font-weight: bold;
+    border: none;
 
+}
+
+
+
+.btn--md {
     width: 175px;
     height: 55px;
+}
 
-    border: none;
+.btn--s {
+    width: 140px;
+    height: 40px;
 }
