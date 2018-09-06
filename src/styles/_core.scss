@@ -59,6 +59,12 @@ button {
     }
 }
 
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 /*
 ================================================================================
     BOOTSTRAP
@@ -71,7 +77,12 @@ button {
     padding: 0;
 }
 
-
+.row-no-padding {
+    [class*="col-"] {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
 
 
 /*
@@ -133,8 +144,8 @@ strong {
 
 
 p {
-    font-family: Lato;
-    font-size: 2vh;
+    font-family: $font-family-base;
+    font-size: 14px;
     font-weight: 400;
     font-style: normal;
     

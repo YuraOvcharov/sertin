@@ -8,4 +8,13 @@ $(document).ready(function(){
         autoplayTimeout:1000,
         autoplayHoverPause:true
     });
+
+    $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true,
+        isFitWidth: true,
+        gutter: 30
+      });
+
   });
