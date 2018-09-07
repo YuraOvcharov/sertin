@@ -26,18 +26,80 @@
 </head>
 <body>
 	<section class="main">
-		<div class="main_title">
-			<h1>SERTIZ</h1>
-			<p>Awsome One Page HTML Templates</p>
-		</div>
-		<div class="main_logo">
-			<span class="main_logo--left">We</span><span class="main_logo--right">make smart design</span> 					
+		<div class="main__container">
+			<div class="main__title">
+				<h1>SERTIZ</h1>
+				<p>Awsome One Page HTML Templates</p>
+			</div>
+			<div class="main__logo">
+				<span class="main__logo--left">We</span><span class="main__logo--right">make smart design</span> 					
+			</div>
 		</div>
 	</section>
 
+	<nav class="navbar navbar-light navbar-expand-lg">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="./images/logo.png" alt="Logo">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-block" aria-controls="navbar-block" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbar-block">
+				<ul class="navbar-nav">
+					<li class="nav-item dropdown active navbar-item">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown-menu_hello" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Hello
+						</a>
+						<div class="dropdown-menu" aria-labelledby="dropdown-menu_hello">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</li>
+					<li class="nav-item navbar-item">
+						<a class="nav-link" href="#">Team</a>
+					</li>
+					<li class="nav-item navbar-item">
+						<a class="nav-link" href="#">Services</a>
+					</li>
+					<li class="nav-item dropdown navbar-item">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown-menu_portfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Portfolio
+						</a>
+						<div class="dropdown-menu" aria-labelledby="dropdown-menu_portfplio">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown navbar-item">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown-menu_blog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Blog
+						</a>
+						<div class="dropdown-menu" aria-labelledby="dropdown-menu_blog">
+							<a class="dropdown-item" href="#">Action</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown navbar-item">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown-menu_elements" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Elements
+						</a>
+						<div class="dropdown-menu" aria-labelledby="dropdown-menu_elements">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</li>
+					<li class="nav-item navbar-item">
+						<a class="nav-link" href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
 	<section class="about">
 		<div class="container">
-			<nav></nav>
 			<div class="title pt-110">
 				<div class="title_name">What they said about us</div>
 				<div class="title_paragraph">
@@ -57,26 +119,26 @@
 				<div class="line"></div>
 			</div>
 
-			<div class="about_service">
-				<div class="photos_workers">
+			<div class="row about_service">
+				<div class="col-sm-12 col-xl-6 photos_workers">
 					<div class="photos_workers_block">
 						<img src="./images/company_1.jpg" alt="" class="photos_workers_block_img">
-						<div class="photos_workers_block_text photos_workers_block_text--dif">Consulting</div>
+						<div class="photos_workers_block_text">Consulting</div>
 					</div>
 					<div class="photos_workers_block">
 						<img src="./images/company_2.jpg" alt="" class="photos_workers_block_img">
-						<div class="photos_workers_block_text photos_workers_block_text--dif">Photography</div>
+						<div class="photos_workers_block_text">Photography</div>
 					</div>
 					<div class="photos_workers_block">
 						<img src="./images/company_3.jpg" alt="" class="photos_workers_block_img">
-						<div class="photos_workers_block_text photos_workers_block_text--dif">Web Design</div>
+						<div class="photos_workers_block_text">Web Design</div>
 					</div>
 					<div class="photos_workers_block">
 						<img src="./images/company_4.jpg" alt="" class="photos_workers_block_img">
-						<div class="photos_workers_block_text photos_workers_block_text--dif">Advertising</div>
+						<div class="photos_workers_block_text">Advertising</div>
 					</div>
 				</div>
-				<div class="about_service_text">
+				<div class="col-sm-12 col-xl-6 about_service_text">
 					<h3>
 						Business <span>Consulting</span> 
 					</h3>
@@ -86,7 +148,7 @@
 					<p>
 						Sed ut perspiciatis unde Sorcimenia omnis iste natus irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat cotessa primastera nulla error sit voluptatem accusantium doloremque laudantium.
 					</p>
-					<button class="btn btn--md">Check Our Projects</button>
+					<button class="btn btn--xl">Check Our Projects</button>
 				</div>
 			</div>
 		</div>
@@ -280,150 +342,186 @@
 				</li>
 			</nav>
 			<div class="portfolio_pages">
-				<div class="portfolio_pages_block">
-					<h3>
-						Portfolio Page Style 1
-					</h3>
-					<div class="line mt-10"></div>
-					<p>
-						You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
-					</p>
-					<button class="btn btn--s">Read More</button>
-
+				<div class="portfolio__wrap">
 					<img class="portfolio_pages_block_img" src="./images/portfolio_1.jpg" alt="Background">
-				</div>
-				<div class="portfolio_pages_block">
-					<h3>
-						Portfolio Page Style 1
-					</h3>
-					<div class="line mt-10"></div>
-					<p>
-						You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
-					</p>
-					<button class="btn btn--s">Read More</button>
 
+					<div class="portfolio_pages_block">
+						<h3>
+							Portfolio Page Style 1
+						</h3>
+						<div class="line mt-10"></div>
+						<p>
+							You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
+						</p>
+						<button class="btn btn--s">Read More</button>
+					</div>
+				</div>
+				<div class="portfolio__wrap">
 					<img class="portfolio_pages_block_img" src="./images/portfolio_2.jpg" alt="Background">
-				</div>
-				<div class="portfolio_pages_block">
-					<h3>
-						Portfolio Page Style 1
-					</h3>
-					<div class="line mt-10"></div>
-					<p>
-						You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
-					</p>
-					<button class="btn btn--s">Read More</button>
 
+					<div class="portfolio_pages_block">
+						<h3>
+							Portfolio Page Style 1
+						</h3>
+						<div class="line mt-10"></div>
+						<p>
+							You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
+						</p>
+						<button class="btn btn--s">Read More</button>
+	
+					</div>
+				</div>
+				<div class="portfolio__wrap">
 					<img class="portfolio_pages_block_img" src="./images/portfolio_3.jpg" alt="Background">
-				</div>
-				<div class="portfolio_pages_block">
-					<h3>
-						Portfolio Page Style 1
-					</h3>
-					<div class="line mt-10"></div>
-					<p>
-						You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
-					</p>
-					<button class="btn btn--s">Read More</button>
 
+					<div class="portfolio_pages_block">
+						<h3>
+							Portfolio Page Style 1
+						</h3>
+						<div class="line mt-10"></div>
+						<p>
+							You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
+						</p>
+						<button class="btn btn--s">Read More</button>
+	
+					</div>
+				</div>
+				<div class="portfolio__wrap">
 					<img class="portfolio_pages_block_img" src="./images/portfolio_4.jpg" alt="Background">
-				</div>
-				<div class="portfolio_pages_block">
-					<h3>
-						Portfolio Page Style 1
-					</h3>
-					<div class="line mt-10"></div>
-					<p>
-						You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
-					</p>
-					<button class="btn btn--s">Read More</button>
 
+					<div class="portfolio_pages_block">
+						<h3>
+							Portfolio Page Style 1
+						</h3>
+						<div class="line mt-10"></div>
+						<p>
+							You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
+						</p>
+						<button class="btn btn--s">Read More</button>
+	
+					</div>
+				</div>
+				<div class="portfolio__wrap">
 					<img class="portfolio_pages_block_img" src="./images/portfolio_5.jpg" alt="Background">
-				</div>
-				<div class="portfolio_pages_block">
-					<h3>
-						Portfolio Page Style 1
-					</h3>
-					<div class="line mt-10"></div>
-					<p>
-						You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
-					</p>
-					<button class="btn btn--s">Read More</button>
 
+					<div class="portfolio_pages_block">
+						<h3>
+							Portfolio Page Style 1
+						</h3>
+						<div class="line mt-10"></div>
+						<p>
+							You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
+						</p>
+						<button class="btn btn--s">Read More</button>
+	
+					</div>
+				</div>
+				<div class="portfolio__wrap">
 					<img class="portfolio_pages_block_img" src="./images/portfolio_6.jpg" alt="Background">
-				</div>
-				<div class="portfolio_pages_block">
-					<h3>
-						Portfolio Page Style 1
-					</h3>
-					<div class="line mt-10"></div>
-					<p>
-						You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
-					</p>
-					<button class="btn btn--s">Read More</button>
 
+					<div class="portfolio_pages_block">
+						<h3>
+							Portfolio Page Style 1
+						</h3>
+						<div class="line mt-10"></div>
+						<p>
+							You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
+						</p>
+						<button class="btn btn--s">Read More</button>
+	
+					</div>
+				</div>
+				<div class="portfolio__wrap">
 					<img class="portfolio_pages_block_img" src="./images/portfolio_7.jpg" alt="Background">
-				</div>
-				<div class="portfolio_pages_block">
-					<h3>
-						Portfolio Page Style 1
-					</h3>
-					<div class="line mt-10"></div>
-					<p>
-						You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
-					</p>
-					<button class="btn btn--s">Read More</button>
 
+					<div class="portfolio_pages_block">
+						<h3>
+							Portfolio Page Style 1
+						</h3>
+						<div class="line mt-10"></div>
+						<p>
+							You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
+						</p>
+						<button class="btn btn--s">Read More</button>
+	
+					</div>
+				</div>
+				<div class="portfolio__wrap">
 					<img class="portfolio_pages_block_img" src="./images/portfolio_8.jpg" alt="Background">
-				</div>
-				<div class="portfolio_pages_block">
-					<h3>
-						Portfolio Page Style 1
-					</h3>
-					<div class="line mt-10"></div>
-					<p>
-						You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
-					</p>
-					<button class="btn btn--s">Read More</button>
 
+					<div class="portfolio_pages_block">
+						<h3>
+							Portfolio Page Style 1
+						</h3>
+						<div class="line mt-10"></div>
+						<p>
+							You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
+						</p>
+						<button class="btn btn--s">Read More</button>
+	
+					</div>
+				</div>
+				<div class="portfolio__wrap">
 					<img class="portfolio_pages_block_img" src="./images/portfolio_9.jpg" alt="Background">
-				</div>
-				<div class="portfolio_pages_block">
-					<h3>
-						Portfolio Page Style 1
-					</h3>
-					<div class="line mt-10"></div>
-					<p>
-						You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
-					</p>
-					<button class="btn btn--s">Read More</button>
 
+					<div class="portfolio_pages_block">
+						<h3>
+							Portfolio Page Style 1
+						</h3>
+						<div class="line mt-10"></div>
+						<p>
+							You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
+						</p>
+						<button class="btn btn--s">Read More</button>
+	
+					</div>
+				</div>
+				<div class="portfolio__wrap">
 					<img class="portfolio_pages_block_img" src="./images/portfolio_10.jpg" alt="Background">
-				</div>
-				<div class="portfolio_pages_block">
-					<h3>
-						Portfolio Page Style 1
-					</h3>
-					<div class="line mt-10"></div>
-					<p>
-						You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
-					</p>
-					<button class="btn btn--s">Read More</button>
 
+					<div class="portfolio_pages_block">
+						<h3>
+							Portfolio Page Style 1
+						</h3>
+						<div class="line mt-10"></div>
+						<p>
+							You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
+						</p>
+						<button class="btn btn--s">Read More</button>
+	
+					</div>
+				</div>
+				<div class="portfolio__wrap">
 					<img class="portfolio_pages_block_img" src="./images/portfolio_11.jpg" alt="Background">
-				</div>
-				<div class="portfolio_pages_block">
-					<h3>
-						Portfolio Page Style 1
-					</h3>
-					<div class="line mt-10"></div>
-					<p>
-						You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
-					</p>
-					<button class="btn btn--s">Read More</button>
 
-					<img class="portfolio_pages_block_img" src="./images/portfolio_12.jpg" alt="Background">
+					<div class="portfolio_pages_block">
+						<h3>
+							Portfolio Page Style 1
+						</h3>
+						<div class="line mt-10"></div>
+						<p>
+							You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
+						</p>
+						<button class="btn btn--s">Read More</button>
+	
+					</div>
 				</div>
+				<div class="portfolio__wrap">
+					<img class="portfolio_pages_block_img" src="./images/portfolio_12.jpg" alt="Background">
+
+					<div class="portfolio_pages_block">
+						<h3>
+							Portfolio Page Style 1
+						</h3>
+						<div class="line mt-10"></div>
+						<p>
+							You can shooce between 5 type of ajax portfolio pages, you just create the HTML page and associate ..
+						</p>
+						<button class="btn btn--s">Read More</button>
+	
+					</div>
+				</div>
+				
 			</div>			
 		</div>
 	</section>
@@ -478,7 +576,7 @@
 			</div>
 
 			<div class="row comments_people">
-				<div class="col-md-4 comments_people_block">
+				<div class="col-xl-4 comments_people_block">
 					<div class="block_img">
 						<img src="./images/quote_bg.png" alt="">
 						<div class="block_img_line"></div>
@@ -502,7 +600,7 @@
 					</div>
 
 				</div>
-				<div class="col-md-4 comments_people_block">
+				<div class="col-xl-4 comments_people_block">
 					<div class="block_img">
 						<img src="./images/quote_bg.png" alt="">
 						<div class="block_img_line"></div>
@@ -525,7 +623,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 comments_people_block">
+				<div class="col-xl-4 comments_people_block">
 					<div class="block_img">
 						<img src="./images/quote_bg.png" alt="">
 						<div class="block_img_line"></div>
@@ -562,7 +660,7 @@
 					We have great products at <span>#Themeforest</span> for One Page Website here <br>
 					<span>themeforest.net/item/akwamarin-one-page-pa...</span>
 				</p>
-				<div class="line line--md"></div>
+				<div class="line line--xl"></div>
 			</div>
 		</div>
 	</section>
@@ -744,7 +842,7 @@
 			</div>
 
 			<div class="row row-no-padding subscribe_row">
-				<div class="col-md-8 offset-md-2">
+				<div class="col-sm-10 col-xl-8 offset-xl-2 offset-sm-1">
 					<div class="input-group subscribe_input-group">
 						<input type="text" class="form-control" placeholder="Your email here..">
 						<div class="input-group-prepend">
@@ -764,68 +862,79 @@
 			</div>
 
 			<div class="subscribe_footer">
-				<!-- <form action="" class="subscribe_footer_form"></form>
-				<div class="subscribe_footer_contacts">
-					<h3 class="subscribe_footer_title">Get in <span>touch</span></h3>
-					<h4></h4>
-					<div class="subscribe_footer_contacts_standart"></div>
-					<h3></h3>
-					<div class="subscribe_footer_contacts_social">
-						<img src="" alt="">
-						<img src="" alt="">
-						<img src="" alt="">
-						<img src="" alt="">
-					</div>
-				</div> -->
 				<div class="row">
-					<div class="col-md-6">
-						<h5>Send us <span>a message</span></h5>
-						<p>Lorem ipsum dolor sit consectetur adipisicing elit eiusmod temp</p>
-						
+					<div class="col-sm-12 col-xl-6 subscribe__msg">
 						<div class="row">
-							<div class="col-md-6">
+							<div class="col-xl-8">
+								<h5>Send us <span>a message</span></h5>
+							</div>
+						</div>
+						<p>
+							Lorem ipsum dolor sit consectetur adipisicing elit eiusmod tempor incididunt.
+						</p>
+						<div class="row">
+							<div class="col-xl-6">
 								<input type="text" class="form-control" placeholder="Name">
 							</div>
-							<div class="col-md-6">
+							<div class="col-xl-6">
 								<input type="text" class="form-control" placeholder="Email">
 							</div>								
 						</div>
-
-
-						<div class="input-group">
-						  </div>
-						<div class="form">
-
+						<textarea class="form-control subscribe_textarea" id="exampleFormControlTextarea1" rows="7" placeholder="Message"></textarea>
+						<div class="form-control_btns">
+							<button class="form-control_btn btn btn--ms">RESET</button>
+							<button class="form-control_btn btn btn--ms">SEND</button>
 						</div>
-						<div class="row">
-							<div class="col-md-3">
-								<button class="btn btn--xs">RESET</button>
-							</div>
-							<div class="col-md-3">
-									<button class="btn btn--xs">SEND</button>
-							</div>
-						</div>
-
 					</div>
-					<div class="col-md-3 offset-md-3">
-						<h5></h5>
+					<div class="col-sm-12 col-xl-4 offset-xl-2 subscribe__social">
+						<h5>
+							Get in <span>touch</span> 
+						</h5>
 						<p>
-
+							You can also contact us at
 						</p>
 						<div class="subscribe_get">
-							<img src="" alt="">
-							<p></p>
+							<img src="./images/location.png" alt="Location">
+							<p>
+								4952 Woodland Drive, Sioux City, IA 51106
+							</p>
 						</div>
-						<h5></h5>
-						<div class="row">
-							<img src="" alt="">
+						<div class="subscribe_get">
+							<img src="./images/phone.png" alt="Phone">
+							<a href="712-274-648">712-274-648</a>
+
+						</div>
+						<div class="subscribe_get">
+							<img src="./images/email.png" alt="Email">
+							<p>
+								DonnaJKoch@jourrapide.com
+							</p>
+						</div>
+						<div class="subscribe_get" style="margin-bottom:30px;">
+							<img src="./images/globe.png" alt="Globe">
+							<a href="#">www.website.com</a>
+						</div>
+						<h5>Follow <span>Us</span></h5>
+						<div class="subscribe_follow">
+							<a href="#" class="subscribe_btn">
+								<i class="fab fa-facebook-f"></i>
+							</a>
+							<a href="#" class="subscribe_btn">
+								<i class="fab fa-twitter"></i>
+							</a>
+							<a href="#" class="subscribe_btn">
+								<i class="fab fa-google-plus-g"></i>
+							</a>
+							<a href="#" class="subscribe_btn">
+								<i class="fa fa-rss"></i>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<h3 class="subscribe_footer_title">Get Our <span>Map Location</span></h3>
-		<h4 class="copy">Copyright © 2014 - Topaz | All Rights Reserved</h4>
+		<h3 class="subscribe_bottom-title">Get Our <span>Map Location</span></h3>
+		<h4 class="subscribe_copy">Copyright © 2014 - Topaz | All Rights Reserved</h4>
 	</section>
 
 </body>

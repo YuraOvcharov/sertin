@@ -43,16 +43,20 @@
     height: 100vh;
     background:  url(../images/main-img.jpg) 100% 100% no-repeat;
     background-size: cover;
+}
 
+.main__container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    width: 100%;
+    height: 100%;
 
     padding-bottom: 16vh;
     padding-left: 80px;
 }
 
-.main_title {
+.main__title {
     color:white;
     margin-bottom: 30px;
 
@@ -65,7 +69,7 @@
     }
 }
 
-.main_logo {
+.main__logo {
     box-sizing: border-box;
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -79,7 +83,7 @@
 
     border-radius: 2px;
 
-    .main_logo--left {
+    .main__logo--left {
         border: 1px solid white;
         border-right: 0;
 
@@ -90,7 +94,7 @@
         line-height: 1;
     }
 
-    .main_logo--right {
+    .main__logo--right {
         padding: 30px 55px 30px 25px;
 
         color: white;
@@ -113,26 +117,15 @@
 
 .about_service {
     margin-top: 55px;//(55 / $ww) + vw;
-    padding-bottom: 190px;
+    margin-bottom: 190px;
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    .photos_workers {
-        max-width: 50%;
-        padding-right: 15px;
-    }
 
     .about_service_text {
 
         position: relative;
-        max-width: 50%;
-
-        padding-left: 15px;
 
         h3 {
-            font-family: Montserrat, sans-serif;;
+            font-family: Montserrat, sans-serif;
             font-size: 18px;
             font-weight: bold;
             text-transform: uppercase;
@@ -181,6 +174,18 @@
         height: 100%;
 
     }
+
+    &:hover {
+        cursor: pointer;
+        .photos_workers_block_img {
+            opacity: 0.5;
+        }
+
+        .photos_workers_block_text {
+            left: 30px;
+            color: $yellow-color;
+        }
+    }
 }
 
 .photos_workers_block_text {
@@ -195,6 +200,11 @@
 
     padding-top: 12px;
     padding-left: 15px;
+
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 /****************** Fix background ******************/
@@ -270,6 +280,20 @@
 
         span {
             color: $yellow-color;
+        }
+    }
+
+    &:hover {
+        opacity: 1;
+        -moz-filter:grayscale(100%);
+        -webkit-filter:grayscale(100%);
+        -o-filter:grayscale(100%);
+        -ms-filter:grayscale(100%);
+        filter:grayscale(100%); 
+
+        .photos_workers_block_text--dif {
+            left: 10px;
+            color: white;
         }
     }
 
@@ -390,11 +414,39 @@
     margin-top: 45px;
 }
 
-.portfolio_pages_block {
-    position: relative;
-
+.portfolio__wrap {
+    position: relative;    
     width: 280px;
     height: 270px;
+    margin-bottom: 15px;  
+
+    .portfolio_pages_block_img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+
+    &:hover {     
+        cursor: pointer; 
+
+        .portfolio_pages_block {
+            opacity: 1;
+        }
+    
+        .portfolio_pages_block_img {
+            opacity: 0;
+        }
+    }
+}
+
+
+
+.portfolio_pages_block {
+    position: relative;
+    border: 2px solid $grey;
+    width: 100%;
+    height: 100%;
     font-family: $font-family-base;
     font-weight: 200;
 
@@ -402,53 +454,25 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-
-    margin-bottom: 15px;   
     
     background-color: white;
 
+    opacity: 0;
+
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;    
+    -ms-transition: all 0.3s ease-out;    
+    -o-transition: all 0.3s ease-out;    
+    transition: all 0.3s ease-out;
     h3 {
         padding-top: 40px;
         font-size: 18px;
-        opacity: 0;
-
-    }
-
-    .line {
-        opacity: 0;
     }
 
     p {
         padding: 25px;
         text-align: center;
-        opacity: 0;
     }
-
-    button {
-        opacity: 0;
-    }
-    
-    .portfolio_pages_block_img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        opacity: 1;
-    }
-    
-    &:hover {      
-        
-        border: 2px solid $grey;
-
-        h3, .line, p, button {
-            opacity: 1;
-        }
-    
-        .portfolio_pages_block_img {
-            opacity: 0;
-            z-index: -1;
-        }
-    }
-
 }
 
 
@@ -710,12 +734,13 @@
 
 .subscribe_footer {
     margin-top: 45px;
+
     h5 {
         font-family: Montserrat , sans-serif;
         font-size: 18px;
         font-weight: bold;
         background-color: $grey;
-        padding: 20px 190px 15px 15px;
+        padding: 20px 0 15px 15px;
         color:white;
 
         margin-bottom: 25px;
@@ -744,5 +769,83 @@
         }
     }
 
+    .subscribe_textarea {
+        padding-top: 15px;
+        padding-left: 15px;
 
+        font-weight: 200;
+        font-style: italic;
+        border-radius: 0;
+
+        border:1px solid #929292;
+        resize: none;
+        margin-bottom: 25px;
+    }
+
+    .form-control_btn {
+        display: inline-block;
+
+        margin-right: 20px;
+    }
+
+    .subscribe_get {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        margin-bottom: 10px;
+
+        p,a {
+            color: #505050;
+            font-weight: 200;
+            margin: 0;
+            padding-left: 10px;
+        }
+    }
+
+    .subscribe_btn {
+        width: 45px;
+        height: 40px;
+        background-color: $yellow-color;
+        border: solid 1px $yellow-color;
+
+        font-size: 18px;
+        margin-right: 15px;
+        display: inline-block;
+        text-align: center;
+        padding-top: 7px;
+        color: white;
+
+        &:hover {
+            background-color: $grey;
+        }
+    }
+}
+.subscribe__msg,.subscribe__social{
+    margin-bottom: 70px;
+}
+.subscribe_bottom-title {
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    background-color: $grey;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+
+    span {
+        color: $yellow-color;
+    }
+}
+
+.subscribe_copy {
+    width: 100%;
+    font-weight: 200;
+    font-size: 14px;
+    margin-bottom: 40px;
+    text-align: center;
 }

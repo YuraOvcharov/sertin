@@ -17,4 +17,19 @@ $(document).ready(function(){
         gutter: 30
       });
 
+ 
+    $(window).scroll(function () {
+        // Get the height of the banner,
+        // and then set your menu.
+        var bannerHeight = $('.main').height();
+        if ($(window).scrollTop() > bannerHeight) {
+            $('.navbar').addClass('fixed-top');
+        } else {
+            $('.navbar').removeClass('fixed-top');
+        }
+    });
+
+
+
   });
+
