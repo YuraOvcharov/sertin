@@ -73,7 +73,7 @@ gulp.task('scripts-vendor', function () {
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
         'node_modules/@fortawesome/fontawesome-free/js/all.js',
         'node_modules/owl.carousel/dist/owl.carousel.min.js',
-        'node_modules/masonry-layout/dist/masonry.pkgd.min.js'
+        'node_modules/isotope-layout/dist/isotope.pkgd.min.js'
         /*'node_modules/jquery/dist/jquery.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
         'bower_components/jquery-mask-plugin/dist/jquery.mask.min.js',

@@ -9,16 +9,17 @@ $(document).ready(function(){
         autoplayHoverPause:true
     });
 
-    $('.grid').masonry({
+    $('.grid').isotope({
         itemSelector: '.grid-item',
-        columnWidth: '.grid-sizer',
-        percentPosition: true,
-        isFitWidth: true,
-        gutter: 30
-      });
+        //percentPosition: true,
+        //isFitWidth: true,
+        //layoutMode: 'masonry',
+        masonry: {
+          columnWidth: '.grid-sizer'
+        }
+      }).isotope('layout');
 
- 
-    $(window).scroll(function () {
+   $(window).scroll(function () {
         // Get the height of the banner,
         // and then set your menu.
         var bannerHeight = $('.main').height();

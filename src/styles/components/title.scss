@@ -21,12 +21,13 @@
     align-items: center;
     flex-direction: column;
 
-    .title_name {
+    .title__name {
         font-family: Montserrat;
         font-size: 22px;//1.375vw;
         font-weight: bold;
         font-style: normal;
         color: $grey;
+        text-align: center;
 
         text-transform: uppercase;
         padding-bottom: 15px;
@@ -37,17 +38,18 @@
     }
 
     // Modification
-    .title_name--white {
+    .title__name--white {
         color: white ;
         padding-bottom: 5px;
     }
 
-    .title_paragraph {
+    .title__paragraph {
         font-family: Lato;
         font-size: 16px;//1vw;
         font-weight: 400;
         font-style: normal;
         color: #4d4943;
+        text-align: center;
     }
 
     p {
@@ -66,7 +68,7 @@
 
 }
 
-.title_btn {
+.title__btn {
     margin-top: 60px;
 
     background-color: inherit;

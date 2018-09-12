@@ -3,12 +3,13 @@
     min-height: 65px;
     border-bottom: 2px solid $yellow-color;
     opacity: .95;
-    padding-left: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .navbar-brand {
     padding: 0;
-    line-height: 1rem;
+    line-height: 65px;
     img {
         width: 110px;
         height: 23px;
@@ -16,17 +17,18 @@
 }
 
 
-.navbar-item{
+.navbar-item {
     padding: 10px 25px;
+
+
 
     .nav-link {
         text-transform: uppercase; 
-        color: $grey;
+        color: $grey !important;
 
-        &:hover,
-        &:active {
-            color: $yellow-color;
-        }
+        &:hover {
+            color: $yellow-color !important;
+       }
     }
 
     .dropdown-menu {

@@ -20,7 +20,6 @@ body {
     font-family: $font-family-base;
     font-size: 1rem;
     line-height: $line-height-base;
-    min-width: 360px;
 
     background: url(../images/dots-background.png) repeat;
     background-size: initial;
@@ -71,16 +70,39 @@ a {
 ================================================================================
 */
 
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
 
-.container {
-    margin: auto;
-    padding: 0;
-}
+.small-gutters {
+    margin-right: -3px;
+    margin-left: -3px;
+    > [class*="col-"] {
+      padding-right: 3px;
+      padding-left: 3px;
+    }
+  }
 
-.row-no-padding {
-    [class*="col-"] {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
+.medium-gutters {
+    margin-right: -30px;
+    margin-left: -30px;
+    > [class*="col-"] {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+
+.large-gutters {
+    margin-right: -45px;
+    margin-left: -45px;
+    > [class*="col-"] {
+      padding-right: 45px;
+      padding-left: 45px;
     }
   }
 
