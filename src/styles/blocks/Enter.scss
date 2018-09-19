@@ -37,6 +37,47 @@
 .mt-10 {
     margin-top: 10px;
 }
+/****************** Preloader ******************/
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 3;
+    transition: 1s all; 
+    opacity: 1;
+    visibility: visible;
+
+    .loader {
+        width: 100%;
+        height: 75px;
+        line-height: 75px;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 70px;
+    }
+
+    &.done {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+
 /****************** MAIN ******************/
 
 .main {
